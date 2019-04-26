@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>sample</OriginalElement>
+  <nodes>
+    <node x="0.0" y="1569.0">sample.Main</node>
+    <node x="334.27083333333337" y="0.0">sample.Resources</node>
+    <node x="75.25000000000003" y="432.0">sample.ProcessController</node>
+    <node x="57.87500000000003" y="0.0">sample.Model</node>
+    <node x="61.27083333333333" y="1738.0">sample.Controller</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="sample.ProcessController" target="sample.Model">
+      <point x="-49.75" y="-543.5" />
+      <point x="125.00000000000003" y="407.0" />
+      <point x="126.87500000000003" y="407.0" />
+      <point x="0.0" y="191.0" />
+    </edge>
+    <edge source="sample.ProcessController" target="sample.Controller">
+      <point x="66.33333333333331" y="543.5" />
+      <point x="241.08333333333334" y="1544.0" />
+      <point x="236.5" y="1544.0" />
+      <point x="236.5" y="1713.0" />
+      <point x="232.27083333333331" y="1713.0" />
+      <point x="57.0" y="-1698.5" />
+    </edge>
+    <edge source="sample.Main" target="sample.ProcessController">
+      <point x="75.33333333333334" y="-59.5" />
+      <point x="188.33333333333334" y="1544.0" />
+      <point x="174.75" y="1544.0" />
+      <point x="-2.8421709430404007E-14" y="543.5" />
+    </edge>
+    <edge source="sample.Controller" target="sample.Main">
+      <point x="-57.0" y="-1698.5" />
+      <point x="118.27083333333333" y="1713.0" />
+      <point x="113.0" y="1713.0" />
+      <point x="0.0" y="59.5" />
+    </edge>
+    <edge source="sample.Main" target="sample.Model">
+      <point x="-75.33333333333331" y="-59.5" />
+      <point x="37.666666666666686" y="1544.0" />
+      <point x="64.75000000000003" y="1544.0" />
+      <point x="64.75000000000003" y="407.0" />
+      <point x="80.87500000000003" y="407.0" />
+      <point x="-46.0" y="191.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="114.0" y="127.5" />
+  <SelectedNodes>
+    <node>sample.Main</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

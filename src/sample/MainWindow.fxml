@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fx:id="bg1" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="195.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg21" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="323.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg22" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="387.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg23" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="451.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg24" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="515.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg25" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="579.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg26" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="643.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg19" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="195.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg20" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="259.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg27" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="707.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg30" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="323.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg31" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="387.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg32" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="451.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg33" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="515.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg34" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="579.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg35" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="643.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg28" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="195.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg29" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="259.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg36" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="707.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg39" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="323.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg40" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="387.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg41" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="451.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg42" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="515.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg43" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="579.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg44" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="643.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg37" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="195.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg38" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="259.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg45" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="707.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg48" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="323.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg49" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="387.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg50" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="451.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg51" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="515.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg52" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="579.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg53" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="643.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg46" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="195.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg47" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="259.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg54" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="707.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg57" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="323.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg58" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="387.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg59" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="451.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg60" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="515.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg61" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="579.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg62" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="643.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg55" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="195.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg56" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="259.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg63" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="707.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg12" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="323.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg13" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="387.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg14" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="451.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg15" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="515.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg16" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="579.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg17" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="643.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg10" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="195.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg11" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="259.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg18" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="707.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg3" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="323.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg4" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="387.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg5" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="451.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg6" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="515.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg7" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="579.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg8" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="643.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg2" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="259.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bg9" accessibleRole="BUTTON" depthTest="DISABLE" fitHeight="64.0" fitWidth="64.0" layoutX="707.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../6j6/Resources/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="BackGroundPictureBlock" accessibleRole="BUTTON" depthTest="DISABLE" fitHeight="128.0" fitWidth="128.0" layoutX="818.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/2.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="TextArea1" layoutX="779.0" layoutY="225.0" prefHeight="286.0" prefWidth="205.0" text="None&#10;------------------------------&#10;Type: Tank&#10;Hp: 6&#10;Ap: 2&#10;Weapon 1:(2dmg)&#10;Canon&#10;Weapon 2:(0dmg)&#10;&#10;Special: None&#10;Effect: " />
+      <Button layoutX="818.0" layoutY="15.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="128.0" text="End turn" />
+      <Button fx:id="Right" layoutX="717.0" layoutY="581.0" mnemonicParsing="false" onMouseClicked="#Right_Click" prefHeight="43.0" prefWidth="43.0" rotate="90.0" text="▲" />
+      <TextArea fx:id="TextArea3" layoutX="780.0" layoutY="527.0" prefHeight="108.0" prefWidth="205.0" text="Mission: capture point&#10;0:0" />
+      <Button fx:id="Down" layoutX="674.0" layoutY="582.0" mnemonicParsing="false" onMouseClicked="#Down_Click" prefHeight="43.0" prefWidth="43.0" text="▼" />
+      <Button fx:id="Left" alignment="CENTER" layoutX="631.0" layoutY="582.0" mnemonicParsing="false" onMouseClicked="#Left_Click" prefHeight="43.0" prefWidth="43.0" rotate="-90.0" text="▲" />
+      <Button fx:id="Up" layoutX="674.0" layoutY="539.0" mnemonicParsing="false" onMouseClicked="#Up_Click" prefHeight="43.0" prefWidth="43.0" text="▲" />
+      <TextField fx:id="TextArea5" layoutX="717.0" layoutY="537.0" prefHeight="43.0" prefWidth="43.0" text="0">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="TextArea4" layoutX="631.0" layoutY="539.0" prefHeight="43.0" prefWidth="43.0" text="0">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </TextField>
+      <Button layoutX="547.0" layoutY="527.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="64.0" text="Skip turn" />
+      <Button layoutX="483.0" layoutY="527.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="52.0" text="Cancel" />
+      <Button layoutX="413.0" layoutY="527.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="64.0" text="Ability" />
+      <Button layoutX="299.0" layoutY="527.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="108.0" text="Weapon 1" />
+      <Button layoutX="299.0" layoutY="587.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="108.0" text="Weapon 2" />
+      <TextArea fx:id="TextArea2" layoutX="7.0" layoutY="347.0" prefHeight="286.0" prefWidth="181.0" />
+      <TextArea fx:id="TextArea6" editable="false" layoutX="194.0" layoutY="15.0" prefHeight="38.0" prefWidth="577.0" style="-fx-position-shape: center;" styleClass="8" text="1 Turn" />
+      <ImageView fx:id="fg21" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="323.0" layoutY="191.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg22" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="387.0" layoutY="191.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg23" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="451.0" layoutY="191.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg24" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="515.0" layoutY="191.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg25" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="579.0" layoutY="191.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg26" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="643.0" layoutY="191.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg19" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="195.0" layoutY="191.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg20" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="259.0" layoutY="191.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg27" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="707.0" layoutY="191.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg30" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="323.0" layoutY="255.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg31" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="387.0" layoutY="255.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg32" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="451.0" layoutY="255.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg33" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="515.0" layoutY="255.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg34" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="579.0" layoutY="255.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg35" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="643.0" layoutY="255.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg28" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="195.0" layoutY="255.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg29" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="259.0" layoutY="255.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg36" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="707.0" layoutY="255.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg39" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="323.0" layoutY="319.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg40" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="387.0" layoutY="319.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg41" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="451.0" layoutY="319.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg42" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="515.0" layoutY="319.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg43" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="579.0" layoutY="319.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg44" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="643.0" layoutY="319.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg37" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="195.0" layoutY="319.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg38" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="259.0" layoutY="319.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg45" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="707.0" layoutY="319.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg48" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="323.0" layoutY="383.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg49" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="387.0" layoutY="383.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg50" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="451.0" layoutY="383.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg51" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="515.0" layoutY="383.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg52" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="579.0" layoutY="383.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg53" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="643.0" layoutY="383.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg46" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="195.0" layoutY="383.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg47" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="259.0" layoutY="383.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg54" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="707.0" layoutY="383.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg57" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="323.0" layoutY="447.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg58" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="387.0" layoutY="447.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg59" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="451.0" layoutY="447.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg60" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="515.0" layoutY="447.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg61" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="579.0" layoutY="447.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg62" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="643.0" layoutY="447.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg55" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="195.0" layoutY="447.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg56" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="259.0" layoutY="447.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg63" accessibleRole="BUTTON" accessibleText="9 7" fitHeight="64.0" fitWidth="64.0" layoutX="707.0" layoutY="447.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg12" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="323.0" layoutY="127.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg13" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="387.0" layoutY="127.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg14" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="451.0" layoutY="127.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg15" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="515.0" layoutY="127.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg16" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="579.0" layoutY="127.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg17" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="643.0" layoutY="127.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg10" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="195.0" layoutY="127.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg11" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="259.0" layoutY="127.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg18" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="707.0" layoutY="127.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg3" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="323.0" layoutY="63.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg4" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="387.0" layoutY="63.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg5" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="451.0" layoutY="63.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg6" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="515.0" layoutY="63.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg7" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="579.0" layoutY="63.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg8" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="643.0" layoutY="63.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg1" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="195.0" layoutY="63.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg2" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="64.0" layoutX="259.0" layoutY="63.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fg9" accessibleRole="BUTTON" depthTest="DISABLE" fitHeight="64.0" fitWidth="64.0" layoutX="707.0" layoutY="63.0" onMouseClicked="#Field_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/sand_jet.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="PictureBlock" accessibleRole="BUTTON" depthTest="DISABLE" fitHeight="128.0" fitWidth="128.0" layoutX="819.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/art.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="194.0" layoutY="527.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="96.0" text="Move" />
+      <Button layoutX="5.0" layoutY="15.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="181.0" text="Menu" />
+      <Button layoutX="106.0" layoutY="74.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" text="Unit 2" />
+      <Button layoutX="7.0" layoutY="73.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" text="Unit 1" />
+      <Button layoutX="106.0" layoutY="122.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" text="Unit 4" />
+      <Button layoutX="7.0" layoutY="122.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" text="Unit 3" />
+      <Button layoutX="106.0" layoutY="169.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" text="Unit 6" />
+      <Button layoutX="7.0" layoutY="169.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" text="Unit 5" />
+      <Button layoutX="106.0" layoutY="216.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" text="Unit 8" />
+      <Button layoutX="7.0" layoutY="216.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" text="Unit 7" />
+      <Button layoutX="105.0" layoutY="264.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" text="Unit 10" />
+      <Button layoutX="7.0" layoutY="264.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" text="Unit 9" />
+   </children>
+</AnchorPane>
