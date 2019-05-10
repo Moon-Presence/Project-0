@@ -14,6 +14,7 @@ public class ProcessController {
     public  final Image reaper = new Image("sample//Resources//reaper.png");
     public  final Image art = new Image("sample//Resources//art.png");
     public  final Image elaser = new Image("sample//Resources//elasertank.png");
+    public  final Image eghoust = new Image("sample//Resources//eghoust.png");
     public  final Image etank = new Image("sample//Resources//etank.png");
     public  final Image ejet = new Image("sample//Resources//esand_jet.png");
     public  final Image ereaper = new Image("sample//Resources//ereaper.png");
@@ -59,6 +60,37 @@ public class ProcessController {
         } if(u<10) Controller.TextBox1.setText( Controller.TextBox1.getText()+unit[u].id +unit[u].Type+"\r\n") ;
     }
 
+    public void map_gen(){
+        Random r = new Random();
+        for (int i = 0; i < 11; i++)
+            for (int j = 0; j < 19; j++)
+            {
+                if (r.nextInt(100) > 60)
+                    switch (r.nextInt(10))
+                    {
+                        case 1:
+                        case 2:
+                        case 3:
+                        case 4: a[i][ j] = 't'; break;
+                        case 5:
+                        case 6:
+                        case 7: a[i][ j] = 'w'; break;
+                        case 8:
+                        case 9:
+                        case 0: a[i][ j] = 'r'; break;
+                    }
+                else
+                {
+                    a[i][ j] = 'g';
+                }
+
+            }
+        for (int i = 0; i < 11; i++)
+            for (int j = 0; j < 19; j++)
+                b[i][ j] = ' ';
+        a[5][ 9] = 'p';
+    }
+
     //Graphics
     //{
     public void d_rendering()
@@ -66,20 +98,18 @@ public class ProcessController {
         for(int i =0;i<7;i++)
             for(int j =0;j<2;j++){
                 switch (a[A + i/9][ B + i%9]) {
-                    case 'r': Controller.bg[i].setImage(ruine); break;
-                    case 'w': Controller.bg[i].setImage(water); break;
-                    case 't': Controller.bg[i].setImage(tree); break;
-                    case 'g': Controller.bg[i].setImage(ground); break;
-                    case 'p': Controller.bg[i].setImage(point);break;
-                    case 'R': Controller.bg[i].setImage(ruine_s); break;
-                    case 'W': Controller.bg[i].setImage(water_s); break;
-                    case 'T': Controller.bg[i].setImage(tree_s); break;
-                    case 'G': Controller.bg[i].setImage(ground_s); break;
-                    case 'P': Controller.bg[i].setImage(point_s); break; }
+                    case 'r': Controller.bg[i*9+j].setImage(ruine); break;
+                    case 'w': Controller.bg[i*9+j].setImage(water); break;
+                    case 't': Controller.bg[i*9+j].setImage(tree); break;
+                    case 'g': Controller.bg[i*9+j].setImage(ground); break;
+                    case 'p': Controller.bg[i*9+j].setImage(point);break;
+                    case 'R': Controller.bg[i*9+j].setImage(ruine_s); break;
+                    case 'W': Controller.bg[i*9+j].setImage(water_s); break;
+                    case 'T': Controller.bg[i*9+j].setImage(tree_s); break;
+                    case 'G': Controller.bg[i*9+j].setImage(ground_s); break;
+                    case 'P': Controller.bg[i*9+j].setImage(point_s); break; }
 
                 if(    (b[A + i/9][ B + i%9]>='0'  &
-                         b[A + i/9][ B + i%9]<='9') ||
-                        (b[A + i/9][ B + i%9]>='0'  &
                          b[A + i/9][ B + i%9]<='9')){
                     switch (unit[b[A + i/9][ B + i%9]].Type) {
                         case "Tank":   Controller.fg[i].setImage(tank); break;
@@ -113,11 +143,7 @@ public class ProcessController {
 
         // object
 
-        if(   (b[A + i/9][ B + i%9]>='0'  &
-               b[A + i/9][ B + i%9]<='9') ||
-              (b[A + i/9][ B + i%9]>='0'  &
-               b[A + i/9][ B + i%9]<='9')
-          ){
+        if( b[A + i/9][ B + i%9]>='0'& b[A + i/9][ B + i%9]<='9'){
             switch (unit[b[A + i/9][ B + i%9]].Type) {
                 case "Tank":   Controller.fg[i].setImage(tank); break;
                 case "Jet":    Controller.fg[i].setImage(jet); break;
@@ -126,10 +152,367 @@ public class ProcessController {
                 case "Laser":  Controller.fg[i].setImage(laser); break;
                 case "Ghoust": Controller.fg[i].setImage(ghoust);break; }}
         else{
-            Controller.fg[i].setImage(space);}}
+            if((b[A + i/9][ B + i%9]>='A' & b[A + i/9][ B + i%9]<='J')){
+                switch (unit[b[A + i/9][ B + i%9] + 10 - 'A'].Type) {
+                    case "Tank":   Controller.fg[i].setImage(etank); break;
+                    case "Jet":    Controller.fg[i].setImage(ejet); break;
+                    case "Reaper": Controller.fg[i].setImage(ereaper); break;
+                    case "Art":    Controller.fg[i].setImage(eart); break;
+                    case "Laser":  Controller.fg[i].setImage(elaser); break;
+                    case "Ghoust": Controller.fg[i].setImage(eghoust);break; }}
+            else{
+                Controller.fg[i].setImage(space);}}}
     }
     //}
 
+    //Unit fast select
+    public void UC(int i)
+    {
+        cnt=i;
+        if (2 <= unit[cnt].I && unit[cnt].I <= 8 && 5 <= unit[cnt].J && unit[cnt].J <= 13)
+        { A = 2; B = 5; }
+        else
+        if (0 <= unit[cnt].I && unit[cnt].I <= 6 && 0 <= unit[cnt].J && unit[cnt].J <= 8)
+        { A = 0; B = 0; }
+        else
+        if (0 <= unit[cnt].I && unit[cnt].I <= 6 && 5 <= unit[cnt].J && unit[cnt].J <= 13)
+        { A = 0; B = 5; }
+        else
+        if (4 <= unit[cnt].I && unit[cnt].I <= 10 && 5 <= unit[cnt].J && unit[cnt].J <= 13)
+        { A = 4; B = 5; }
+        else
+        if (4 <= unit[cnt].I && unit[cnt].I <= 10 && 0 <= unit[cnt].J && unit[cnt].J <= 8)
+        { A = 4; B = 0; }
+        else
+        if (0 <= unit[cnt].I && unit[cnt].I <= 6 && 10 <= unit[cnt].J && unit[cnt].J <= 18)
+        { A = 0; B = 10;}
+        else
+        { A = 4; B = 10;} Controller.TextBox4.setText("" + A); Controller.TextBox5.setText ("" + B);
+        rendering1(); coordinate_i = unit[cnt].I; coordinate_j = unit[cnt].J;selecting();
+    }
+
+    public void endTurn(){
+
+        Controller.TextBox1.setText ( "");
+        for (int u =10;u<N+10;u++)
+            if(unit[u].Effect!="KIA")
+                switch (unit[u].Type)
+                {
+                    case "Tank":
+                    case "Ghoust":
+                    case "Laser":
+                    case "Reaper":if (b_attack1(u) != true) b_move(u,5,9);b_move(u,5,9); break;
+                    case "Art": if (b_attack1(u) != true) b_move(u,5,9); break;
+                    case "Jet":  if (round == 1) { b_move(u, unit[u].I, 9); b_move(u, unit[u].I, 9); } else { if (b_attack1(u) != true) b_move(u, 5, 9); b_move(u, 5, 9); } break;
+                }
+
+        if (b[5][ 9] >= '0' && b[5][ 9] <= '9')
+        pp++;
+            else if (b[5][ 9] >= 'A' && b[5][ 9] <= 'J')
+        bp++;
+        Controller.TextBox3.setText ( "Mission: capture point\r\n"+pp+":"+bp);
+
+        for (int i = 0; i < N; i++)
+            if (unit[i].Type != "Art") unit[i].AP = 2; else unit[i].AP = 1;
+
+        if (round == 10){ Controller.Startb.setDisable(true);
+            if (pp > bp)
+                Controller.TextBox6.setText ("Victory");
+            else
+                Controller.TextBox6.setText ( "Defeat");}
+        else {
+            round++; Controller.TextBox6.setText ( round +" Turn");}
+        for(int i =0;i<11;i++)
+            for (int j = 0; j < 19; j++)
+                switch (a[i][ j])
+        {
+            case 'R': a[i][ j] = 'r'; break;
+            case 'W': a[i][ j] = 'w'; break;
+            case 'T': a[i][ j] = 't'; break;
+            case 'G': a[i][ j] = 'g'; break;
+            case 'P': a[i][ j] = 'p'; break;
+        }
+        rendering1();
+    }
+
+
+    // меню взаимодействия
+    //{
+    public void Mb_Click()
+    {
+        for (int i = 0; i < 11; i++)
+            for (int j = 0; j < 19; j++)
+                switch (a[i][ j])
+        {
+            case 'R': a[i][ j] = 'r'; break;
+            case 'W': a[i][ j] = 'w'; break;
+            case 'T': a[i][ j] = 't'; break;
+            case 'G': a[i][ j] = 'g'; break;
+            case 'P': a[i][ j] = 'p'; break;
+        }
+        int abs1, abs2;
+        switch (unit[cnt].Type)
+        {
+
+            case "Tank":
+                for (int i = 0; i < 11; i++)
+                    for (int j = 0; j < 19; j++)
+                        if ((Math.abs(unit[cnt].I - i) + Math.abs(unit[cnt].J - j)) <= 2 && b[i][ j] == ' ')
+                switch (a[i][ j]) { case 'r': a[i][j] = 'R'; break;  case 't': a[i][ j] = 'T'; break; case 'g': a[i][ j] = 'G'; break; case 'p': a[i][ j] = 'P'; break; }
+            break;
+
+
+            case "Art":
+                for (int i = 0; i < 11; i++)
+                    for (int j = 0; j < 19; j++)
+
+                        if ((Math.abs(unit[cnt].I - i) + Math.abs(unit[cnt].J - j)) <= 2&& b[i][ j] == ' ')
+                switch (a[i][ j]) { case 'r': a[i][ j] = 'R'; break;  case 't': a[i][ j] = 'T'; break; case 'g': a[i][ j] = 'G'; break; case 'p': a[i][ j] = 'P'; break; }
+            break;
+
+            case "Reaper":
+                for (int i = 0; i < 11; i++)
+                    for (int j = 0; j < 19; j++)
+                        if ((Math.abs(unit[cnt].I - i) + Math.abs(unit[cnt].J - j)) <= 2&& b[i][ j] == ' ')
+                switch (a[i][ j]) { case 'r': a[i][ j] = 'R'; break; case 't': a[i][ j] = 'T'; break; case 'g': a[i][ j] = 'G'; break; case 'p': a[i][ j] = 'P'; break; }
+            break;
+
+
+            case "Ghoust":
+                for (int i = 0; i < 11; i++)
+                    for (int j = 0; j < 19; j++)
+                        if ((Math.abs(unit[cnt].I - i) + Math.abs(unit[cnt].J - j)) <= 2&&b[i][ j] == ' ')
+                switch (a[i][ j]) { case 'r': a[i][ j] = 'R'; break;  case 't': a[i][ j] = 'T'; break; case 'g': a[i][ j] = 'G'; break; case 'p': a[i][ j] = 'P'; break; }
+            break;
+
+
+            case "Laser":
+                for (int i = 0; i < 11; i++)
+                    for (int j = 0; j < 19; j++)
+                        if ((Math.abs(unit[cnt].I - i) + Math.abs(unit[cnt].J - j)) <= 2&&b[i][j] == ' ')
+                switch (a[i][ j]) { case 'r': a[i][ j] = 'R'; break; case 't': a[i][ j] = 'T'; break; case 'g': a[i][j] = 'G'; break; case 'p': a[i][ j] = 'P'; break; }
+            break;
+
+
+            case "Jet":
+                for (int i = 0; i < 11; i++)
+                    for (int j = 0; j < 19; j++)
+                        if ((Math.abs(unit[cnt].I - i) + Math.abs(unit[cnt].J - j)) <= 4 && b[i][j]==' ')
+                switch (a[i][ j]) { case 'r': a[i][ j] = 'R'; break; case 'w': a[i][ j] = 'W'; break; case 't': a[i][ j] = 'T'; break; case 'g': a[i][ j] = 'G'; break; case 'p': a[i][ j] = 'P'; break; }
+            break;
+        } rendering1(); context = "move";
+    }
+    public void W1b_Click()
+    {
+        for (int i = 0; i < 11; i++)
+            for (int j = 0; j < 19; j++)
+                switch (a[i][ j])
+        {
+            case 'R': a[i][ j] = 'r'; break;
+            case 'W': a[i][ j] = 'w'; break;
+            case 'T': a[i][ j] = 't'; break;
+            case 'G': a[i][ j] = 'g'; break;
+            case 'P': a[i][ j] = 'p'; break;
+        }
+        int abs1, abs2;
+        switch (unit[cnt].Type)
+        {
+
+            case "Tank":
+                for(int i =0; i<11;i++)
+                    for(int j=0; j <19;j++)
+                        if( (Math.abs(unit[cnt].I-i)+Math.abs(unit[cnt].J-j))<=2)
+                            switch (a[i][j]) { case 'r': a[i][j] = 'R'; break; case 'w': a[i][j] = 'W'; break; case 't': a[i][j] = 'T'; break; case 'g': a[i][j] = 'G'; break; case 'p': a[i][j] = 'P'; break; } break;
+
+
+            case "Art":
+                for (int i = 0; i < 11; i++)
+                    for (int j = 0; j < 19; j++)
+                    { abs1 = Math.abs(unit[cnt].I - i); abs2 = Math.abs(unit[cnt].J - j);
+                        if ((abs1 >1 || abs2 > 1) && abs1<=5 && abs2 <= 5 && abs1+abs2<=8)
+                            switch (a[ i][ j]) { case 'r': a[ i][ j] = 'R'; break; case 'w': a[ i][ j] = 'W'; break; case 't': a[ i][ j] = 'T'; break; case 'g': a[ i][ j] = 'G'; break; case 'p': a[ i][ j] = 'P'; break; }}; break;
+
+            case "Reaper":
+                for (int i = 0; i < 11; i++)
+                    for (int j = 0; j < 19; j++)
+                        if ((Math.abs(unit[cnt].I - i) + Math.abs(unit[cnt].J - j)) <= 2)
+                            switch (a[i][ j]) { case 'r': a[i][ j] = 'R'; break; case 'w': a[i][ j] = 'W'; break; case 't': a[i][ j] = 'T'; break; case 'g': a[i][ j] = 'G'; break; case 'p': a[i][ j] = 'P'; break; }
+            break;
+
+
+            case "Ghoust":
+                for (int i = 0; i < 11; i++)
+                    for (int j = 0; j < 19; j++)
+                        if ((Math.abs(unit[cnt].I - i) + Math.abs(unit[cnt].J - j)) <= 2)
+                            switch (a[i][ j]) { case 'r': a[i][ j] = 'R'; break; case 'w': a[i][ j] = 'W'; break; case 't': a[i][ j] = 'T'; break; case 'g': a[i][ j] = 'G'; break; case 'p': a[i][ j] = 'P'; break; }
+            break;
+
+
+            case "Laser":
+                for (int i = 0; i < 11; i++)
+                    for (int j = 0; j < 19; j++)
+                        if (((unit[cnt].I - unit[cnt].J) ==(i - j)) ||((unit[cnt].I + unit[cnt].J) == (i + j)) ||i==unit[cnt].I||j==unit[cnt].J)
+                            switch (a[i][ j]) { case 'r': a[i][ j] = 'R'; break; case 'w': a[i][ j] = 'W'; break; case 't': a[i][ j] = 'T'; break; case 'g': a[i][ j] = 'G'; break; case 'p': a[i][ j] = 'P'; break; }
+            break;
+
+
+            case "Jet":
+                for (int i = 0; i < 11; i++)
+                    for (int j = 0; j < 19; j++)
+                        if ((Math.abs(unit[cnt].I - i) + Math.abs(unit[cnt].J - j)) <= 4)
+                            switch (a[i][ j]) { case 'r': a[i][ j] = 'R'; break; case 'w': a[i][ j] = 'W'; break; case 't': a[i][ j] = 'T'; break; case 'g': a[i][ j] = 'G'; break; case 'p': a[i][ j] = 'P'; break; }
+            break;
+
+        }
+        rendering1(); context = "w1";
+    }
+    public void W2b_Click()
+    {
+        for (int i = 0; i < 11; i++)
+            for (int j = 0; j < 19; j++)
+                switch (a[i][ j])
+        {
+            case 'R': a[i][ j] = 'r'; break;
+            case 'W': a[i][ j] = 'w'; break;
+            case 'T': a[i][ j] = 't'; break;
+            case 'G': a[i][ j] = 'g'; break;
+            case 'P': a[i][ j] = 'p'; break;
+        }
+        switch (unit[cnt].Type)
+        {
+            case "Reaper":
+                for (int i = 0; i < 11; i++)
+                    for (int j = 0; j < 19; j++)
+                        if ((Math.abs(unit[cnt].I - i) + Math.abs(unit[cnt].J - j)) <= 2)
+                            switch (a[i][ j]) { case 'r': a[i][ j] = 'R'; break; case 'w': a[i][ j] = 'W'; break; case 't': a[i][ j] = 'T'; break; case 'g': a[i][ j] = 'G'; break; case 'p': a[i][ j] = 'P'; break; }
+            break;
+
+
+            case "Ghoust":
+                for (int i = 0; i < 11; i++)
+                    for (int j = 0; j < 19; j++)
+                        if ((Math.abs(unit[cnt].I - i) + Math.abs(unit[cnt].J - j)) == 1)
+                            switch (a[i][ j]) { case 'r': a[i][ j] = 'R'; break; case 'w': a[i][ j] = 'W'; break; case 't': a[i][ j] = 'T'; break; case 'g': a[i][ j] = 'G'; break; case 'p': a[i][ j] = 'P'; break; }
+            break;
+
+        }
+        rendering1(); context = "w2";
+    }
+    public void Sb_Click()
+    {
+        for (int i = 0; i < 11; i++)
+            for (int j = 0; j < 19; j++)
+                switch (a[i][ j])
+        {
+            case 'R': a[i][ j] = 'r'; break;
+            case 'W': a[i][ j] = 'w'; break;
+            case 'T': a[i][ j] = 't'; break;
+            case 'G': a[i][ j] = 'g'; break;
+            case 'P': a[i][ j] = 'p'; break;
+        }
+        int abs1, abs2;
+        switch (unit[cnt].Type)
+        {
+
+            case "Tank":
+                for (int i = 0; i < 11; i++)
+                    for (int j = 0; j < 19; j++)
+                        if ((Math.abs(unit[cnt].I - i) + Math.abs(unit[cnt].J - j)) == 1)
+                            switch (a[i][ j]) { case 'r': a[i][ j] = 'R'; break; case 'w': a[i][ j] = 'W'; break; case 't': a[i][ j] = 'T'; break; case 'g': a[i][ j] = 'G'; break; case 'p': a[i][ j] = 'P'; break; }
+            break;
+
+            case "Reaper":
+                for (int i = 0; i < 11; i++)
+                    for (int j = 0; j < 19; j++)
+                        if ((Math.abs(unit[cnt].I - i) + Math.abs(unit[cnt].J - j)) == 1)
+                            switch (a[i][ j]) { case 'r': a[i][ j] = 'R'; break; case 'w': a[i][ j] = 'W'; break; case 't': a[i][ j] = 'T'; break; case 'g': a[i][ j] = 'G'; break; case 'p': a[i][ j] = 'P'; break; }
+            break;
+
+
+            case "Ghoust": unit[cnt].Effect = "Hide"; unit[cnt].AP--; break;
+
+            case "Jet":
+                for (int i = 0; i < 11; i++)
+                    for (int j = 0; j < 19; j++)
+                        if ((Math.abs(unit[cnt].I - i)==5 &&Math.abs(unit[cnt].J - j) ==0) || (Math.abs(unit[cnt].J - j) == 5 &&Math.abs(unit[cnt].I - i)==0))
+                            switch (a[i][ j]) { case 'r': a[i][ j] = 'R'; break; case 'w': a[i][ j] = 'W'; break; case 't': a[i][ j] = 'T'; break; case 'g': a[i][ j] = 'G'; break; case 'p': a[i][ j] = 'P'; break; }
+            break;
+
+        }
+        rendering1(); context = "special";
+    }
+    public void Cb_Click()
+    {
+        for (int i = 0; i < 11; i++)
+            for (int j = 0; j < 19; j++)
+                switch (a[i][ j])
+        {
+            case 'R': a[i][ j] = 'r'; break;
+            case 'W': a[i][ j] = 'w'; break;
+            case 'T': a[i][ j] = 't'; break;
+            case 'G': a[i][ j] = 'g'; break;
+            case 'P': a[i][ j] = 'p'; break;
+        }
+        context = "select";  Controller.TextBox2.setText (""); rendering1();
+    }
+    public void Stb_Click()
+    {
+        unit[cnt].AP = 0;selecting();
+
+    }
+    public void Menu_Click()
+    {/*
+        String buff;
+        GameMenu z = new GameMenu();
+        z.ShowDialog();
+        buff = z.context; z.Close();
+        if (buff == "s")
+        {
+            String sb="";
+            OpenFileDialog save = new OpenFileDialog();
+            save.Filter = "Save files (*.doc)|*.doc";
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                FileStream fs = new FileStream(save.FileName, FileMode.Open, FileAccess.Write);
+                StreamWriter wr = new StreamWriter(fs);
+                for (int i = 0; i < 11; i++)
+                    for (int j = 0; j < 19; j++)
+                        sb += a[i][ j] + "~";
+                for (int i = 0; i < 11; i++)
+                    for (int j = 0; j < 19; j++)
+                        sb += b[i][ j] + "~";
+
+                sb += pp + "~";
+                sb += bp + "~";
+                sb += round + "~";
+                sb += N + "~";
+
+                for (int i = 0; i < 19; i++)
+                {
+                    sb +=unit[i].Type + "~";
+                    sb +=unit[i].HP + "~";
+                    sb +=unit[i].AP + "~";
+                    sb +=unit[i].I + "~";
+                    sb += unit[i].J + "~";
+                }
+                sb += unit[19].Type + "~";
+                sb += unit[19].HP + "~";
+                sb += unit[19].AP + "~";
+                sb += unit[19].I + "~";
+                sb += unit[19].J ;
+                textBox1.Text = sb;
+
+                //CodeWriter
+                    /*
+                    for (int i = 0; i < 7; i++)
+                        for (int j = 1; j < 8; j++)
+                            sb += "b" + (2 + j + 9 * i) + ".Enabled=true;\r\n";
+                wr.WriteLine(sb); wr.Close();
+                MessageBox.Show("Successful saving", "Save window", MessageBoxButtons.OK);
+            }
+        }*/
+    }
+    //}
 
     //Bot
     //{
@@ -491,65 +874,27 @@ public class ProcessController {
 
     //{
     public void deploy() //переделать
-    {/*
+    {
         if (b[coordinate_i][coordinate_j] != ' ') return;
         unit[cnt].I = coordinate_i; unit[cnt].J = coordinate_j; b[coordinate_i][coordinate_j] = unit[cnt].id; selecting();
 
         cnt++;
-        if (cnt == N) { cnt--; context = "select";textBox6.setText( "1 Turn");
-            Controller.TextBox1.setText( "Unit's has been successfull deployed"); RIGHT.Enabled = true;Menu.Enabled = true; rendering1(); b3.Enabled = true;
-            b4.Enabled = true;
-            b5.Enabled = true;
-            b6.Enabled = true;
-            b7.Enabled = true;
-            b8.Enabled = true;
-            b9.Enabled = true;
-            b12.Enabled = true;
-            b13.Enabled = true;
-            b14.Enabled = true;
-            b15.Enabled = true;
-            b16.Enabled = true;
-            b17.Enabled = true;
-            b18.Enabled = true;
-            b21.Enabled = true;
-            b22.Enabled = true;
-            b23.Enabled = true;
-            b24.Enabled = true;
-            b25.Enabled = true;
-            b26.Enabled = true;
-            b27.Enabled = true;
-            b30.Enabled = true;
-            b31.Enabled = true;
-            b32.Enabled = true;
-            b33.Enabled = true;
-            b34.Enabled = true;
-            b35.Enabled = true;
-            b36.Enabled = true;
-            b39.Enabled = true;
-            b40.Enabled = true;
-            b41.Enabled = true;
-            b42.Enabled = true;
-            b43.Enabled = true;
-            b44.Enabled = true;
-            b45.Enabled = true;
-            b48.Enabled = true;
-            b49.Enabled = true;
-            b50.Enabled = true;
-            b51.Enabled = true;
-            b52.Enabled = true;
-            b53.Enabled = true;
-            b54.Enabled = true;
-            b57.Enabled = true;
-            b58.Enabled = true;
-            b59.Enabled = true;
-            b60.Enabled = true;
-            b61.Enabled = true;
-            b62.Enabled = true;
-            b63.Enabled = true; return;  }
-        d_rendering();*/
+        if (cnt == N) {
+            cnt--;
+            context = "select";
+            Controller.TextBox6.setText( "1 Turn");
+            Controller.TextBox1.setText( "Unit's has been successfull deployed");
+            Controller.Rightb.setDisable(false);
+            Controller.Menub.setDisable(false);
+            rendering1();
+            for(int i =0;i<7;i++)
+                for(int j =2;j<9;j++){
+                    Controller.fg[i*9+j].setDisable(false);}
+             return;  }
+        d_rendering();
     }
     public void selecting() //переделать
-    {/*
+    {
         boolean e = false;
         for (int i = 0; i < 11; i++)
             for (int j = 0; j < 19; j++)
@@ -562,11 +907,11 @@ public class ProcessController {
             case 'P': a[i][j] = 'p';  break;
         }
 
-        Mb.Enabled = false;
-        Stb.Enabled = false;
-        W1b.Enabled = false;
-        Sb.Enabled = false;
-        W2b.Enabled = false; W2b.Visible = true;
+        Controller.Mb.setDisable(true);
+        Controller.Stb.setDisable(true);
+        Controller.W1b.setDisable(true);
+        Controller.Sb. setDisable(true);
+        Controller.W2b.setDisable(true);// W2b.Visible = true;
 
         switch (b[coordinate_i][coordinate_j])
         {
@@ -608,18 +953,18 @@ public class ProcessController {
 
             if (!e)
             {
-                if (unit[cnt].AP > 0) Mb.Enabled = true;
-                Stb.Enabled = true;
-                if (unit[cnt].AP > 0) W1b.Enabled = true;
+                if (unit[cnt].AP > 0) Controller.Mb.setDisable(false);
+                Controller.Stb.setDisable(false);
+                if (unit[cnt].AP > 0) Controller.W1b.setDisable(false);
                 //if (((/*unit[cnt].Type == "Jet" || unit[cnt].Type == "Reaper") && unit[cnt].AP == 2) || ((unit[cnt].Type == "Tank" || unit[cnt].Type == "Ghoust") && unit[cnt].AP >= 1)) Sb.Enabled = true;
                 switch (unit[cnt].Type)
                 {
-                    case "Tank": W2b.Visible = false; Controller.pb.setImage( tank); break;
-                    case "Jet": W2b.Visible = false; Controller.pb.setImage( jet); break;
-                    case "Reaper": if (unit[cnt].AP >= 0) W2b.Enabled = true; Controller.pb.setImage( reaper); break;
-                    case "Ghoust": if (unit[cnt].AP >= 0) W2b.Enabled = true; Controller.pb.setImage( ghoust); break;
-                    case "Art": W2b.Visible = false; Controller.pb.setImage( art); break;
-                    case "Laser": W2b.Visible = false; Controller.pb.setImage(  laser); break;
+                    case "Tank": Controller.W2b.setVisible(false); Controller.pb.setImage( tank); break;
+                    case "Jet": Controller.W2b.setVisible(false); Controller.pb.setImage( jet); break;
+                    case "Reaper": if (unit[cnt].AP >= 0) Controller.W2b.setDisable(false); Controller.pb.setImage( reaper); break;
+                    case "Ghoust": if (unit[cnt].AP >= 0) Controller.W2b.setDisable(false); Controller.pb.setImage( ghoust); break;
+                    case "Art": Controller.W2b.setVisible(false); Controller.pb.setImage( art); break;
+                    case "Laser": Controller.W2b.setVisible(false); Controller.pb.setImage(  laser); break;
                 }
             }
             else
@@ -630,11 +975,11 @@ public class ProcessController {
                     case "Reaper": Controller.pb.setImage(  ereaper); break;
                     case "Art": Controller.pb.setImage( eart); break;
                     case "Laser": Controller.pb.setImage( elaser); break;
-                    Добавь чёртвого призрака
+                    case "Ghoust":Controller.pb.setImage(eghoust);break;
                 }
 
             Controller.TextBox2.setText( Controller.TextBox2.getText() + "\r\n------------------------------\r\n"); if(unit[cnt].Type!="None")Controller.TextBox2.setText( Controller.TextBox2.getText() + "Type: " + unit[cnt].Type + "\r\n" + "Hp: " + unit[cnt].HP + "\r\n" + "Ap: " + unit[cnt].AP + "\r\n" + "Weapon 1:("+unit[cnt].damage1+"dmg)\r\n"+ unit[cnt].W1+ "\r\n"+ "Weapon 2:(" + unit[cnt].damage2 + "dmg)\r\n" + unit[cnt].W2 + "\r\n"+ "Special: " + unit[cnt].Special + "\r\n"+ "Effect: " + unit[cnt].Effect + "\r\n");
-        }*/
+        }
 
     }
     public void move()

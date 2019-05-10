@@ -10,6 +10,9 @@ import javafx.scene.input.MouseEvent;
 public class Controller {
 
     @FXML
+    private ImageView bg1;
+
+    @FXML
     private ImageView bg21;
 
     @FXML
@@ -190,9 +193,6 @@ public class Controller {
     private ImageView bg8;
 
     @FXML
-    private ImageView bg1;
-
-    @FXML
     private ImageView bg2;
 
     @FXML
@@ -203,6 +203,9 @@ public class Controller {
 
     @FXML
     private TextArea TextArea1;
+
+    @FXML
+    private Button Start;
 
     @FXML
     private Button Right;
@@ -224,6 +227,21 @@ public class Controller {
 
     @FXML
     private TextField TextArea4;
+
+    @FXML
+    private Button Skip;
+
+    @FXML
+    private Button Cancel;
+
+    @FXML
+    private Button SpecialButton;
+
+    @FXML
+    private Button Weapon1Button;
+
+    @FXML
+    private Button Weapon2Button;
 
     @FXML
     private TextArea TextArea2;
@@ -424,23 +442,56 @@ public class Controller {
     private ImageView PictureBlock;
 
     @FXML
+    private Button MoveButton;
+
+    @FXML
+    private Button Menu;
+
+    @FXML
+    private Button Unit2;
+
+    @FXML
+    private Button Unit1;
+
+    @FXML
+    private Button Unit4;
+
+    @FXML
+    private Button Unit3;
+
+    @FXML
+    private Button Unit6;
+
+    @FXML
+    private Button Unit5;
+
+    @FXML
+    private Button Unit8;
+
+    @FXML
+    private Button Unit7;
+
+    @FXML
+    private Button Unit10;
+
+    @FXML
+    private Button Unit9;
+
+    @FXML
     void Down_Click(MouseEvent event) {
         if(Main.CentralCore.A != 4){ Main.CentralCore.A++;TextBox4.setText(""+Main.CentralCore.A);}
         if (Main.CentralCore.context == "deploy") Main.CentralCore.d_rendering(); else Main.CentralCore.rendering1();
     }
-
     @FXML
     void Left_Click(MouseEvent event) {
         if(Main.CentralCore.B != 0){ Main.CentralCore.B--;TextBox5.setText(""+Main.CentralCore.B);}
         if (Main.CentralCore.context == "deploy") Main.CentralCore.d_rendering(); else Main.CentralCore.rendering1();
     }
-
     @FXML
     void Right_Click(MouseEvent event) {
         if(Main.CentralCore.B != 10){ Main.CentralCore.B++;TextBox5.setText(""+Main.CentralCore.B);}
         if (Main.CentralCore.context == "deploy") Main.CentralCore.d_rendering(); else Main.CentralCore.rendering1();
     }
-
     @FXML
     void Up_Click(MouseEvent event) {
         if(Main.CentralCore.A != 0){ Main.CentralCore.A--;TextBox4.setText(""+Main.CentralCore.A);}
@@ -454,6 +505,45 @@ public class Controller {
         Main.CentralCore.coordinate_j=((int)event.getSceneX()-195)/64+Main.CentralCore.B;
         Main.CentralCore.reaction();
     }
+    @FXML
+    void Mb_click(MouseEvent event) { Main.CentralCore.Mb_Click();}
+    @FXML
+    void Menu_click(MouseEvent event) { Main.CentralCore.Menu_Click();}
+    @FXML
+    void W1b_click(MouseEvent event) { Main.CentralCore.W1b_Click();}
+    @FXML
+    void W2b_click(MouseEvent event) { Main.CentralCore.W2b_Click();}
+    @FXML
+    void Sb_click(MouseEvent event) { Main.CentralCore.Sb_Click();}
+    @FXML
+    void Cb_click(MouseEvent event) { Main.CentralCore.Cb_Click();}
+    @FXML
+    void Stb_click(MouseEvent event) { Main.CentralCore.Stb_Click();}
+
+    @FXML
+    void Start_click(MouseEvent event)      {Main.CentralCore.endTurn();}
+
+    @FXML
+    void U1Click(MouseEvent event) { Main.CentralCore.UC(0);}
+    @FXML
+    void U2Click(MouseEvent event) { Main.CentralCore.UC(1);}
+    @FXML
+    void U3Click(MouseEvent event) { Main.CentralCore.UC(2);}
+    @FXML
+    void U4Click(MouseEvent event) { Main.CentralCore.UC(3);}
+    @FXML
+    void U5Click(MouseEvent event) { Main.CentralCore.UC(4);}
+    @FXML
+    void U6Click(MouseEvent event) { Main.CentralCore.UC(5);}
+    @FXML
+    void U7Click(MouseEvent event) { Main.CentralCore.UC(6);}
+    @FXML
+    void U8Click(MouseEvent event) { Main.CentralCore.UC(7);}
+    @FXML
+    void U9Click(MouseEvent event) { Main.CentralCore.UC(8);}
+    @FXML
+    void U10Click(MouseEvent event){ Main.CentralCore.UC(9);}
+
 
 
     @FXML
@@ -477,11 +567,33 @@ public class Controller {
     public static ImageView pb= new ImageView();
     @FXML
     public static ImageView bgpb= new ImageView();
-    @FXML
-    void Click(MouseEvent event) {
-        Main.CentralCore.rendering1();
 
-    }
+
+
+    @FXML
+    public static Button Sb= new Button();
+    @FXML
+    public static Button Stb= new Button();
+
+    @FXML
+    public static Button W1b= new Button();
+
+    @FXML
+    public static Button W2b= new Button();
+
+    @FXML
+    public static Button Mb= new Button();
+
+    @FXML
+    public static Button Rightb= new Button();
+    @FXML
+    public static Button Menub= new Button();
+    @FXML
+    public  static Button Startb=new Button();
+
+
+
+
 
 
     @FXML
@@ -499,6 +611,15 @@ public class Controller {
         TextBox6=TextArea6;
         TextBox5=TextArea5;
         TextBox4=TextArea4;
+
+        Sb=SpecialButton;
+        Stb=Skip;
+        W1b=Weapon1Button;
+        W2b=Weapon2Button;
+        Mb=MoveButton;
+        Rightb=Right;
+        Menub=Menu;
+        Startb=Start;
 
         fg = new ImageView[63];
 
@@ -632,6 +753,8 @@ public class Controller {
         bg[61] = bg62;
         bg[62] = bg63;
     }
+
+
 
 
 
