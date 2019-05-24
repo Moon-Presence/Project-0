@@ -544,8 +544,8 @@ public class Controller {
     @FXML
     void U10Click(MouseEvent event){ Main.CentralCore.UC(9);}
 
-
-
+    @FXML
+    public static Button U[]=new Button[10];
     @FXML
     public static  TextArea TextBox1= new TextArea();
     @FXML
@@ -605,8 +605,8 @@ public class Controller {
         bgpb=BackGroundPictureBlock;
         pb=PictureBlock;
 
-        TextBox1=TextArea1;
-        TextBox2=TextArea2;
+        TextBox1=TextArea2;
+        TextBox2=TextArea1;
         TextBox3=TextArea3;
         TextBox6=TextArea6;
         TextBox5=TextArea5;
@@ -620,6 +620,17 @@ public class Controller {
         Rightb=Right;
         Menub=Menu;
         Startb=Start;
+
+        U[0]=Unit1;
+        U[1]=Unit2;
+        U[2]=Unit3;
+        U[3]=Unit4;
+        U[4]=Unit5;
+        U[5]=Unit6;
+        U[6]=Unit7;
+        U[7]=Unit8;
+        U[8]=Unit9;
+        U[9]=Unit10;
 
         fg = new ImageView[63];
 

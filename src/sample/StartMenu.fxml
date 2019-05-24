@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="171.0" prefWidth="202.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StartController">
+   <children>
+      <Button fx:id="NG" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#newGame" prefHeight="68.0" prefWidth="174.0" text="New game">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="LG" layoutX="14.0" layoutY="89.0" mnemonicParsing="false" onMouseClicked="#loadGame" prefHeight="68.0" prefWidth="174.0" text="Load game">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
