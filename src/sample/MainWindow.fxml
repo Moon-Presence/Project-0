@@ -327,7 +327,7 @@
       </ImageView>
       <ImageView fx:id="BackGroundPictureBlock" accessibleRole="BUTTON" depthTest="DISABLE" fitHeight="128.0" fitWidth="128.0" layoutX="818.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Resources/2.png" />
+            <Image url="@Resources/cell.png" />
          </image>
       </ImageView>
       <TextArea fx:id="TextArea1" layoutX="779.0" layoutY="225.0" prefHeight="286.0" prefWidth="205.0" text="None&#10;------------------------------&#10;Type: Tank&#10;Hp: 6&#10;Ap: 2&#10;Weapon 1:(2dmg)&#10;Canon&#10;Weapon 2:(0dmg)&#10;&#10;Special: None&#10;Effect: " />

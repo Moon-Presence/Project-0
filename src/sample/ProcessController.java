@@ -9,30 +9,30 @@ import java.util.Random;
 public class ProcessController {
 
     //units load
-    public  final Image laser = new Image("sample//Resources//lasertank.png");
-    public  final Image ghoust = new Image("sample//Resources//ghoust.png");
-    public  final Image tank = new Image("sample//Resources//tank.png");
-    public  final Image jet = new Image("sample//Resources//sand_jet.png");
-    public  final Image reaper = new Image("sample//Resources//reaper.png");
-    public  final Image art = new Image("sample//Resources//art.png");
-    public  final Image elaser = new Image("sample//Resources//elasertank.png");
-    public  final Image eghoust = new Image("sample//Resources//eghoust.png");
-    public  final Image etank = new Image("sample//Resources//etank.png");
-    public  final Image ejet = new Image("sample//Resources//esand_jet.png");
-    public  final Image ereaper = new Image("sample//Resources//ereaper.png");
-    public  final Image eart = new Image("sample//Resources//eart.png");
-    public  final Image space = new Image("sample//Resources//0.png");
+    public  final Image laser = new Image("sample/Resources//lasertank.png");
+    public  final Image ghoust = new Image("sample/Resources//ghoust.png");
+    public  final Image tank = new Image("sample/Resources//tank.png");
+    public  final Image jet = new Image("sample/Resources//sand_jet.png");
+    public  final Image reaper = new Image("sample/Resources//reaper.png");
+    public  final Image art = new Image("sample/Resources//art.png");
+    public  final Image elaser = new Image("sample/Resources//elasertank.png");
+    public  final Image eghoust = new Image("sample/Resources//eghoust.png");
+    public  final Image etank = new Image("sample/Resources//etank.png");
+    public  final Image ejet = new Image("sample/Resources//esand_jet.png");
+    public  final Image ereaper = new Image("sample/Resources//ereaper.png");
+    public  final Image eart = new Image("sample/Resources//eart.png");
+    public  final Image space = new Image("sample/Resources//0.png");
     //background load
-    public  final Image ruine_s = new Image("sample//Resources//5s.png");
-    public  final Image water_s = new Image("sample//Resources//3s.png");
-    public  final Image tree_s = new Image("sample//Resources//4s.png");
-    public  final Image ground_s = new Image("sample//Resources//2s.png");
-    public  final Image point_s = new Image("sample//Resources//fs.png");
-    public  final Image ruine = new Image("sample//Resources//5.png");
-    public  final Image water = new Image("sample//Resources//3.png");
-    public  final Image tree = new Image("sample//Resources//4.png");
-    public  final Image ground = new Image("sample//Resources//2.png");
-    public  final Image point = new Image("sample//Resources//f.png");
+    public  final Image ruine_s = new Image("sample/Resources//5s.png");
+    public  final Image water_s = new Image("sample/Resources//3s.png");
+    public  final Image tree_s = new Image("sample/Resources//4s.png");
+    public  final Image ground_s = new Image("sample/Resources//2s.png");
+    public  final Image point_s = new Image("sample/Resources//fs.png");
+    public  final Image ruine = new Image("sample/Resources//5.png");
+    public  final Image water = new Image("sample/Resources//3.png");
+    public  final Image tree = new Image("sample/Resources//4.png");
+    public  final Image ground = new Image("sample/Resources//2.png");
+    public  final Image point = new Image("sample/Resources//f.png");
 
     public static String context="select";
     public static int N=5;// units quantity

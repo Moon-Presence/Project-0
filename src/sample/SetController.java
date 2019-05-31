@@ -103,7 +103,7 @@ public class SetController {
     }
 
     @FXML
-    public ComboBox<String> ComBox[]= new ComboBox[10];
+    public ComboBox ComBox[]= new ComboBox[10];
 
 
     @FXML
@@ -111,6 +111,8 @@ public class SetController {
         initialization();
     }
     public void initialization() {
+        for (int i =0;i<10;i++)
+            ComBox[i]=new ComboBox<String>();
         ComBox[0]=CB1;
         ComBox[1]=CB2;
         ComBox[2]=CB3;
