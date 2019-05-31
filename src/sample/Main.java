@@ -27,13 +27,10 @@ public class Main extends Application {
         myPrimStage=primaryStage;
 
         Parent root = FXMLLoader.load(getClass().getResource("MainWindow.fxml"));
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("");
         primaryStage.setScene(new Scene(root, 1051, 692));
 
-        primaryStage.show();
-        CentralCore.rendering1();
-        //setings();
-        //menu();
+        setings();
     }
 
     public static void setings()throws Exception{
@@ -41,12 +38,6 @@ public class Main extends Application {
         setstage.setTitle("My New Stage Title");
         setstage.setScene(new Scene(root1, 404, 354));
         setstage.show();
-    }
-    void menu()throws Exception{
-        Parent root1 = (Parent) FXMLLoader.load(getClass().getResource("StartMenu.fxml"));
-        menu.setTitle("My New Stage Title");
-        menu.setScene(new Scene(root1, 202, 171));
-        menu.show();
     }
 
     public static void main(String[] args) {

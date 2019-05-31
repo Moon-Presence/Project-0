@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="354.0" prefWidth="404.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SetController">
    <children>
-      <Label fx:id="Label" layoutX="144.0" layoutY="44.0" prefHeight="20.0" prefWidth="117.0" text="Units in squad:" textAlignment="RIGHT" textOverrun="CLIP" wrapText="true">
+      <Label fx:id="Label" layoutX="144.0" layoutY="44.0" prefHeight="20.0" prefWidth="117.0" text="Units in squad: 1" textAlignment="RIGHT" textOverrun="CLIP" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
@@ -25,6 +25,6 @@
       <ComboBox fx:id="CB9" disable="true" layoutX="215.0" layoutY="221.0" prefWidth="150.0" promptText="Tank" />
       <ComboBox fx:id="CB5" disable="true" layoutX="39.0" layoutY="251.0" prefWidth="150.0" promptText="Tank" />
       <ComboBox fx:id="CB10" disable="true" layoutX="215.0" layoutY="251.0" prefWidth="150.0" promptText="Tank" />
-      <Button fx:id="Button" layoutX="134.0" layoutY="303.0" mnemonicParsing="false" onAction="#Click" prefHeight="37.0" prefWidth="136.0" text="Button" />
+      <Button fx:id="Button" layoutX="134.0" layoutY="303.0" mnemonicParsing="false" onAction="#Click" prefHeight="37.0" prefWidth="136.0" text="Start" />
    </children>
 </AnchorPane>

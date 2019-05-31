@@ -445,9 +445,6 @@ public class Controller {
     private Button MoveButton;
 
     @FXML
-    private Button Menu;
-
-    @FXML
     private Button Unit2;
 
     @FXML
@@ -507,8 +504,6 @@ public class Controller {
     }
     @FXML
     void Mb_click(MouseEvent event) { Main.CentralCore.Mb_Click();}
-    @FXML
-    void Menu_click(MouseEvent event) { Main.CentralCore.Menu_Click();}
     @FXML
     void W1b_click(MouseEvent event) { Main.CentralCore.W1b_Click();}
     @FXML
@@ -587,8 +582,6 @@ public class Controller {
     @FXML
     public static Button Rightb= new Button();
     @FXML
-    public static Button Menub= new Button();
-    @FXML
     public  static Button Startb=new Button();
 
 
@@ -618,7 +611,6 @@ public class Controller {
         W2b=Weapon2Button;
         Mb=MoveButton;
         Rightb=Right;
-        Menub=Menu;
         Startb=Start;
 
         U[0]=Unit1;

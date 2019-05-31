@@ -92,70 +92,7 @@ public class ProcessController {
                 b[i][ j] = ' ';
         a[5][ 9] = 'p';
     }
-    public void load()throws Exception{
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Open Resource File");
-        fileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter("Saved games (*.doc)", "*.doc"));
-        File saveFile=fileChooser.showOpenDialog(Main.menu);
 
-
-        /*
-
-        OpenFileDialog loadDialog = new OpenFileDialog();
-        loadDialog.Filter = "Save files ( *.doc)| *.doc";
-        if (loadDialog.ShowDialog() == DialogResult.OK)
-        {
-            StreamReader fs = new StreamReader(loadDialog.FileName,Encoding.Default);
-            string buf1 = fs.ReadToEnd();
-            string[] buf =buf1.Split('~');
-            int c = 0;
-            for (int i = 0; i < 11; i++)
-                for (int j = 0; j < 19; j++)
-                { a[i, j] = Convert.ToChar(buf[c]); b[i, j] = Convert.ToChar(buf[c+209]); c++; }
-
-            pp = Convert.ToInt32(buf[418]);
-            bp = Convert.ToInt32(buf[419]);
-            round = Convert.ToInt32(buf[420]);
-            N = Convert.ToInt32(buf[421]); c=422;
-            if(pp > 10||bp > 10||round > 10||N > 10) { MessageBox.Show("Something go wrong. Please, try again!", "!!Error!!", MessageBoxButtons.OK); return; }
-
-            for (int i = 0; i < N; i++,c+=5)
-            {
-                if (buf[c ] != "nn" && buf[c+50] != "nn"&& (buf[c]=="Tank"|| buf[c] == "Jet" || buf[c] == "Art" || buf[c] == "Laser" || buf[c] == "Reaper" ||buf[c]=="Ghoust"))
-                {
-                    restoring(i, (String)buf[c]);
-                    unit[i].Type=buf[c];
-                    unit[i].HP = Convert.ToInt32(buf[ 1 + c]);
-                    unit[i].AP = Convert.ToInt32(buf[ 2 + c]);
-                    unit[i].I = Convert.ToInt32(buf[3 + c]);
-                    unit[i].J = Convert.ToInt32(buf[4 + c]);
-                    restoring(i+10, buf[c+50]);
-                    unit[i+10].Type = buf[c+50];
-                    unit[i+10].HP = Convert.ToInt32(buf[50 + 1 + c]);
-                    unit[i+10].AP = Convert.ToInt32(buf[50 + 2 + c]);
-                    unit[i+10].I = Convert.ToInt32(buf[50+ 3 + c]);
-                    unit[i+10].J = Convert.ToInt32(buf[50+ 4 + c]);
-                }
-                else
-                { MessageBox.Show("Something go wrong. Please, try again!", "!!Error!!", MessageBoxButtons.OK); return; }
-
-            }
-        }
-        else
-        { MessageBox.Show("Something go wrong. Please, try again!", "!!Error!!", MessageBoxButtons.OK); return; }
-        Controller.TextBox1.setText ("Loading complete"); Controller.TextBox6.setText ( round + " Turn");
-
-        for(int i=0;i<7;i++)
-            for(int j =2;j<9;j++){
-                Controller.fg[i*9+j].setDisable(false);
-            }
-
-        rendering1();
-        context = "select";
-        if (context == "exit") { MessageBox.Show("Something go wrong. Please, restart the programm!", "!!Error!!", MessageBoxButtons.OK); return; }
-*/
-    }
 
     //Graphics
     //{
@@ -177,7 +114,7 @@ public class ProcessController {
 
                 if(    (b[A + i][ B + j]>='0'  &&
                          b[A + i][ B + j]<='9')){
-                    switch (unit[b[A + i][ B + j]].Type) {
+                    switch (unit[b[A + i][ B + j]-'0'].Type) {
                         case "Tank":   Controller.fg[i*9+j].setImage(tank); break;
                         case "Jet":    Controller.fg[i*9+j].setImage(jet); break;
                         case "Reaper": Controller.fg[i*9+j].setImage(reaper); break;
@@ -210,7 +147,7 @@ public class ProcessController {
         // object
 
         if( b[A + i/9][ B + i%9]>='0'&& b[A + i/9][ B + i%9]<='9'){
-            switch (unit[b[A + i/9][ B + i%9]].Type) {
+            switch (unit[b[A + i/9][ B + i%9]-'0'].Type) {
                 case "Tank":   Controller.fg[i].setImage(tank); break;
                 case "Jet":    Controller.fg[i].setImage(jet); break;
                 case "Reaper": Controller.fg[i].setImage(reaper); break;
@@ -218,8 +155,8 @@ public class ProcessController {
                 case "Laser":  Controller.fg[i].setImage(laser); break;
                 case "Ghoust": Controller.fg[i].setImage(ghoust);break; }}
         else{
-            if((b[A + i/9][ B + i%9]>='A' && b[A + i/9][ B + i%9]<='J')){
-                switch (unit[b[A + i/9][ B + i%9] + 10 - 'A'].Type) {
+            if(b[A + i/9][ B + i%9]>='A' && b[A + i/9][ B + i%9]<='A'+10){
+                switch (unit[b[A + i/9][ B + i%9]-'A'+10].Type) {
                     case "Tank"  : Controller.fg[i].setImage(etank); break;
                     case "Jet"   : Controller.fg[i].setImage(ejet); break;
                     case "Reaper": Controller.fg[i].setImage(ereaper); break;
@@ -526,58 +463,7 @@ public class ProcessController {
         unit[cnt].AP = 0;selecting();
 
     }
-    public void Menu_Click()
-    {/*
-        String buff;
-        GameMenu z = new GameMenu();
-        z.ShowDialog();
-        buff = z.context; z.Close();
-        if (buff == "s")
-        {
-            String sb="";
-            OpenFileDialog save = new OpenFileDialog();
-            save.Filter = "Save files (*.doc)|*.doc";
-            if (save.ShowDialog() == DialogResult.OK)
-            {
-                FileStream fs = new FileStream(save.FileName, FileMode.Open, FileAccess.Write);
-                StreamWriter wr = new StreamWriter(fs);
-                for (int i = 0; i < 11; i++)
-                    for (int j = 0; j < 19; j++)
-                        sb += a[i][ j] + "~";
-                for (int i = 0; i < 11; i++)
-                    for (int j = 0; j < 19; j++)
-                        sb += b[i][ j] + "~";
 
-                sb += pp + "~";
-                sb += bp + "~";
-                sb += round + "~";
-                sb += N + "~";
-
-                for (int i = 0; i < 19; i++)
-                {
-                    sb +=unit[i].Type + "~";
-                    sb +=unit[i].HP + "~";
-                    sb +=unit[i].AP + "~";
-                    sb +=unit[i].I + "~";
-                    sb += unit[i].J + "~";
-                }
-                sb += unit[19].Type + "~";
-                sb += unit[19].HP + "~";
-                sb += unit[19].AP + "~";
-                sb += unit[19].I + "~";
-                sb += unit[19].J ;
-                textBox1.Text = sb;
-
-                //CodeWriter
-                    /*
-                    for (int i = 0; i < 7; i++)
-                        for (int j = 1; j < 8; j++)
-                            sb += "b" + (2 + j + 9 * i) + ".Enabled=true;\r\n";
-                wr.WriteLine(sb); wr.Close();
-                MessageBox.Show("Successful saving", "Save window", MessageBoxButtons.OK);
-            }
-        }*/
-    }
     //}
 
     //Bot
@@ -948,18 +834,18 @@ public class ProcessController {
         selecting();
 
         cnt++;
-        if (cnt == N) {
+        if (cnt == N)
+        {
             cnt--;
             context = "select";
             Controller.TextBox6.setText( "1 Turn");
             Controller.TextBox1.setText( "Unit's has been successfull deployed");
             Controller.Rightb.setDisable(false);
-            Controller.Menub.setDisable(false);
             rendering1();
             for(int i =0;i<7;i++)
                 for(int j =2;j<9;j++){
                     Controller.fg[i*9+j].setDisable(false);}
-             }
+        }
         d_rendering();
     }
     public void selecting() //переделать

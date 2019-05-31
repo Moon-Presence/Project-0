@@ -64,6 +64,7 @@ public class SetController {
         Main.CentralCore.N=(int)Slider.getValue();
         for(int i =0;i<Main.CentralCore.N;i++){
             Main.CentralCore.unit[i].Type= String.valueOf(ComBox[i].getValue());
+            Main.CentralCore.unit[i+10].Type= String.valueOf(ComBox[i].getValue());
         }
 
 

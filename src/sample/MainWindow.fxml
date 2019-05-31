@@ -675,7 +675,6 @@
          </image>
       </ImageView>
       <Button fx:id="MoveButton" layoutX="194.0" layoutY="527.0" mnemonicParsing="false" onMouseClicked="#Mb_click" prefHeight="108.0" prefWidth="96.0" text="Move" />
-      <Button fx:id="Menu" layoutX="5.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#Menu_click" prefHeight="38.0" prefWidth="181.0" text="Save" />
       <Button fx:id="Unit2" disable="true" layoutX="106.0" layoutY="74.0" mnemonicParsing="false" onMouseClicked="#U2Click" prefHeight="38.0" prefWidth="80.0" text="Unit 2" />
       <Button fx:id="Unit1" disable="true" layoutX="7.0" layoutY="73.0" mnemonicParsing="false" onMouseClicked="#U1Click" prefHeight="38.0" prefWidth="80.0" text="Unit 1" />
       <Button fx:id="Unit4" disable="true" layoutX="106.0" layoutY="122.0" mnemonicParsing="false" onMouseClicked="#U4Click" prefHeight="38.0" prefWidth="80.0" text="Unit 4" />
