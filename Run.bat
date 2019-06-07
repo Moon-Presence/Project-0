@@ -28,6 +28,9 @@ set MAIN_JAVA_PATH=src\%PACKAGE_NAME%\%MAIN_JAVA_NAME%.java
 
 :: compile
 javac -Xlint:unchecked -sourcepath src -encoding UTF-8 "%MAIN_JAVA_PATH%" -d Doc
+cls
+xcopy src Doc /s/h/e/k/f
+cls
 cd doc
 java sample.Main
 @echo off
