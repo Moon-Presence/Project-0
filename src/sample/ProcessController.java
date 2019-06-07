@@ -3,12 +3,11 @@ package sample;
 import javafx.scene.image.Image;
 import javafx.stage.FileChooser;
 
+import javax.imageio.ImageIO;
 import java.io.File;
 import java.util.Random;
 
 public class ProcessController {
-
-    //units load
     public  final Image laser = new Image("sample/Resources//lasertank.png");
     public  final Image ghoust = new Image("sample/Resources//ghoust.png");
     public  final Image tank = new Image("sample/Resources//tank.png");
